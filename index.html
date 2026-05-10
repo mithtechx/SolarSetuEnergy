@@ -3,139 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Setu Energy | Compare & Get Best Solar Quotes</title>
+  <title>Solar Setu Energy | Compare Solar Vendors</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Poppins', system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?solar-panels') center/cover; }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+                  url('https://source.unsplash.com/1600x900/?solar-panels,rooftop') center/cover no-repeat;
+    }
+    .step-img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
   <!-- Top Bar -->
   <div class="bg-green-700 text-white text-sm py-2">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <div>+91 78808 87770 | sampark@solarsetuenergy.com</div>
-      <div class="flex items-center gap-4">
-        <span class="text-yellow-300">PM Surya Ghar Subsidy Available</span>
-      </div>
+      <div> 9922016004| infosolarsetu@gmail.com</div>
+      <div>PM Surya Ghar Subsidy: Up to ₹78,000</div>
     </div>
   </div>
 
   <!-- Header -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-green-700">Solar<span class="text-orange-500">Setu</span></h1>
-      <nav class="hidden md:flex gap-8 font-medium">
+      <h1 class="text-3xl font-bold text-green-700">Solar<span class="text-orange-500">Setu</span></h1>
+      <nav class="hidden md:flex gap-8 text-lg">
         <a href="#" class="hover:text-green-600">Home</a>
         <a href="#" class="hover:text-green-600">Vendors</a>
-        <a href="#" class="hover:text-green-600">Services</a>
         <a href="#" class="hover:text-green-600">About</a>
+        <a href="#" class="hover:text-green-600">Contact</a>
       </nav>
-      <button onclick="alert('Get Quotation Form will open here')" 
-              class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">
+      <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold">
         Get Free Quotation
       </button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-bg text-white py-24">
+  <!-- Hero Section with Background Image -->
+  <section class="hero-bg text-white py-28 md:py-32">
     <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-5xl md:text-6xl font-bold mb-6">India's Trusted Solar Vendor<br>Comparison Platform</h2>
-      <p class="text-xl mb-10">Compare verified vendors • Best price after subsidy • Hassle-free installation</p>
+      <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Get the Best Solar Deal in Minutes
+      </h2>
+      <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+        Compare verified vendors • Transparent pricing • Hassle-free installation
+      </p>
       
-      <div class="max-w-md mx-auto bg-white text-gray-900 p-6 rounded-2xl shadow-xl">
-        <h3 class="font-semibold mb-4 text-lg">Check Your Savings</h3>
-        <input type="number" id="roof" placeholder="Roof Size (sq ft)" 
-               class="w-full border rounded-lg px-4 py-3 mb-3">
+      <!-- Savings Calculator -->
+      <div class="max-w-lg mx-auto bg-white text-gray-900 p-8 rounded-3xl shadow-2xl">
+        <h3 class="text-2xl font-semibold mb-6">Check Your Monthly Savings</h3>
+        <input type="number" id="roof" placeholder="Enter Roof Size (sq ft)" 
+               class="w-full border-2 border-gray-300 rounded-2xl px-5 py-4 text-lg mb-4 focus:outline-none focus:border-green-600">
         <button onclick="calculateSavings()" 
-                class="w-full bg-green-600 text-white py-4 rounded-lg font-bold text-lg">
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl text-xl font-bold">
           Calculate Savings →
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Vendor Types -->
+  <!-- Vendor Cards -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Choose Your Solar Partner</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Recommended -->
-        <div class="border-2 border-green-600 rounded-3xl p-8 bg-green-50">
-          <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm">RECOMMENDED</span>
-          <h3 class="text-2xl font-bold mt-4">Premium Verified Vendors</h3>
-          <ul class="mt-6 space-y-3">
-            <li>✅ Tier-1 Panels</li>
-            <li>✅ 25 Years Warranty</li>
-            <li>✅ Free 5-Year Maintenance</li>
-            <li>✅ Live Project Tracking</li>
-          </ul>
+      <h2 class="text-4xl font-bold text-center mb-12">Our Verified Solar Vendors</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="border rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/600x400/?solar-installation" class="w-full h-52 object-cover" alt="Premium Vendor">
+          <div class="p-6">
+            <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm">RECOMMENDED</span>
+            <h3 class="font-bold text-2xl mt-4">Premium Solar Solutions</h3>
+            <p class="text-gray-600 mt-2">Tier-1 Panels • 25 Years Warranty</p>
+          </div>
         </div>
-        <!-- Standard -->
-        <div class="border-2 border-gray-300 rounded-3xl p-8">
-          <h3 class="text-2xl font-bold mt-4">Standard Certified Vendors</h3>
-          <ul class="mt-6 space-y-3">
-            <li>✅ Good Quality Panels</li>
-            <li>✅ 10-15 Years Warranty</li>
-            <li>✅ Basic Support</li>
-          </ul>
+
+        <div class="border rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/600x400/?solar-panel,worker" class="w-full h-52 object-cover" alt="Standard Vendor">
+          <div class="p-6">
+            <h3 class="font-bold text-2xl mt-4">Reliable Solar Co.</h3>
+            <p class="text-gray-600 mt-2">Best Value • Fast Installation</p>
+          </div>
+        </div>
+
+        <div class="border rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="https://source.unsplash.com/600x400/?solar-rooftop" class="w-full h-52 object-cover" alt="Local Vendor">
+          <div class="p-6">
+            <h3 class="font-bold text-2xl mt-4">Local Expert Installers</h3>
+            <p class="text-gray-600 mt-2">5+ Years Experience</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 Steps -->
+  <!-- 4 Simple Steps with Images -->
   <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">4 Simple Steps</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">4 Simple Steps to Go Solar</h2>
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center mx-auto text-3xl font-bold">1</div>
-          <h4 class="mt-6 font-semibold">Share Your Requirement</h4>
+        
+        <div class="bg-white rounded-3xl overflow-hidden shadow">
+          <img src="https://source.unsplash.com/600x400/?form,application" class="step-img w-full" alt="Step 1">
+          <div class="p-6 text-center">
+            <div class="text-4xl font-bold text-green-600 mb-3">01</div>
+            <h4 class="font-semibold text-xl">Share Your Requirement</h4>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center mx-auto text-3xl font-bold">2</div>
-          <h4 class="mt-6 font-semibold">Compare Multiple Quotes</h4>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow">
+          <img src="https://source.unsplash.com/600x400/?comparison,quotes" class="step-img w-full" alt="Step 2">
+          <div class="p-6 text-center">
+            <div class="text-4xl font-bold text-green-600 mb-3">02</div>
+            <h4 class="font-semibold text-xl">Compare Multiple Quotes</h4>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center mx-auto text-3xl font-bold">3</div>
-          <h4 class="mt-6 font-semibold">Choose Best Vendor</h4>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow">
+          <img src="https://source.unsplash.com/600x400/?choose,decision" class="step-img w-full" alt="Step 3">
+          <div class="p-6 text-center">
+            <div class="text-4xl font-bold text-green-600 mb-3">03</div>
+            <h4 class="font-semibold text-xl">Choose Best Vendor</h4>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center mx-auto text-3xl font-bold">4</div>
-          <h4 class="mt-6 font-semibold">Track Installation</h4>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow">
+          <img src="https://source.unsplash.com/600x400/?installation,solar" class="step-img w-full" alt="Step 4">
+          <div class="p-6 text-center">
+            <div class="text-4xl font-bold text-green-600 mb-3">04</div>
+            <h4 class="font-semibold text-xl">Track & Enjoy Solar</h4>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="bg-green-700 text-white py-16 text-center">
+  <!-- Final CTA -->
+  <section class="bg-green-700 text-white py-20 text-center">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-6">Ready to Go Solar?</h2>
-      <p class="text-xl mb-8">Get 3 verified quotes in 24 hours</p>
-      <button class="bg-white text-green-700 px-10 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100">
-        Get Quotation Now
+      <h2 class="text-5xl font-bold mb-6">Ready to Save on Electricity?</h2>
+      <p class="text-2xl mb-10">Get 3 Verified Quotes in 24 Hours</p>
+      <button class="bg-white text-green-700 px-12 py-6 rounded-3xl text-2xl font-bold hover:bg-gray-100 transition">
+        Get Quotation Now →
       </button>
     </div>
   </section>
 
-  <footer class="bg-gray-900 text-gray-400 py-12">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p>&copy; 2026 Solar Setu Energy. All Rights Reserved.</p>
-    </div>
+  <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+    <p>&copy; 2026 Solar Setu Energy • All Rights Reserved</p>
   </footer>
 
   <script>
     function calculateSavings() {
       const size = document.getElementById('roof').value;
-      if (size) {
-        alert(`For ${size} sq ft roof, you can save approx ₹${Math.round(size * 8)} per month after subsidy!`);
+      if (size > 0) {
+        const savings = Math.round(size * 7.5);
+        alert(`Great! For ${size} sq ft roof, you can save approx ₹${savings} per month after subsidy!`);
       } else {
-        alert("Please enter roof size");
+        alert("Please enter your roof size");
       }
     }
   </script>

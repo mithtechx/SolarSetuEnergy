@@ -380,3 +380,23 @@ footer {
     align-items: center;
   }
 }
+/* Custom Logo Styles */
+.custom-logo {
+  height: 55px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Make logo responsive */
+@media (max-width: 768px) {
+  .custom-logo {
+    height: 45px;
+  }
+}

@@ -112,31 +112,46 @@
     </div>
   </section>
 
-  <!-- Calculator -->
-  <section id="calculator" class="section" style="background: var(--dark); color:white;">
+<!-- Improved Calculator Section -->
+  <section id="calculator" class="section" style="background: #1d3557; color: white;">
     <div class="container">
-      <h2 class="section-title" style="color:white;">Calculate Your Savings</h2>
+      <h2 class="section-title" style="color:white;">Calculate Your Solar Savings</h2>
       <div class="calculator-box">
-        <input type="number" id="monthlyBill" placeholder="Your Monthly Electricity Bill (₹)" style="padding:15px; width:100%; margin-bottom:15px; border-radius:10px;">
-        <button onclick="calculateSavings()" class="btn btn-primary" style="width:100%;">Calculate Now</button>
+        <div class="calc-input">
+          <label>Monthly Electricity Bill (₹)</label>
+          <input type="number" id="monthlyBill" placeholder="e.g. 3500" value="3500">
+        </div>
+        <button onclick="calculateSavings()" class="btn btn-primary" style="width:100%; margin-top:15px;">Calculate Savings</button>
+        
+        <div id="calcResults" class="calc-results" style="display:none; margin-top:25px;">
+          <h3>Your Estimated Savings</h3>
+          <p><strong>Recommended System:</strong> <span id="recKW"></span></p>
+          <p><strong>Monthly Saving:</strong> <span id="monthlySave"></span></p>
+          <p><strong>Annual Saving:</strong> <span id="annualSave"></span></p>
+          <p><strong>Government Subsidy:</strong> <span id="subsidyAmt"></span></p>
+          <p><strong>Payback Period:</strong> <span id="payback"></span></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Enquiry / Contact -->
+  <!-- Improved Enquiry Section -->
   <section id="enquiry" class="section">
     <div class="container">
-      <h2 class="section-title">Ready to Go Solar?</h2>
+      <h2 class="section-title">Ready to Switch to Solar?</h2>
       <div class="enquiry-form">
         <input type="text" id="enqName" placeholder="Your Full Name">
-        <input type="tel" id="enqPhone" placeholder="Phone Number *">
+        <input type="tel" id="enqPhone" placeholder="Phone Number *" required>
         <select id="enqKW">
-          <option value="">Select Capacity</option>
-          <option value="1-2 KW">1-2 KW (Home)</option>
-          <option value="3-5 KW">3-5 KW</option>
-          <option value="5+ KW">5+ KW / Commercial</option>
+          <option value="">Select System Size</option>
+          <option value="1-2 KW">1-2 KW (Small Home)</option>
+          <option value="3 KW">3 KW (Standard Home)</option>
+          <option value="5+ KW">5+ KW (Large Home / Commercial)</option>
         </select>
-        <button onclick="sendToWhatsApp()" class="btn btn-primary" style="width:100%;">Send via WhatsApp</button>
+        <textarea id="enqMessage" rows="3" placeholder="Any specific requirement? (Optional)"></textarea>
+        <button onclick="sendToWhatsApp()" class="btn btn-primary" style="width:100%; padding:18px;">
+          <i class="fab fa-whatsapp"></i> Send Message on WhatsApp
+        </button>
       </div>
     </div>
   </section>

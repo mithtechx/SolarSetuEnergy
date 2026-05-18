@@ -127,3 +127,27 @@ nav {
   .nav-links { display: flex; }
   .mobile-menu { display: none; }
 }
+/* Add this at the end of css/style.css */
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+              url('../images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.stats {
+  background: linear-gradient(135deg, #10b981, #047857);
+  color: white;
+}
+
+.gallery-img {
+  transition: all 0.4s;
+  border-radius: 16px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+}

@@ -26,5 +26,122 @@
 <footer class="footer"><div class="container footer-inner"><div>© 2025 Solar Setu Energy • All Rights Reserved</div><div>Powering Maharashtra with Smart Solar Solutions</div></div></footer>
 <a class="whatsapp-float" href="https://wa.me/919922016004" target="_blank" aria-label="WhatsApp">☘</a>
 <script src="script.js"></script>
+  <!-- Solar Setu FAQ Chatbot -->
+<div id="chatbot-toggle">💬</div>
+
+<div id="chatbot-box">
+  <div class="chat-header">Solar Setu Help</div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-option" onclick="showSub('price')">1. Solar Prices</div>
+    <div class="chat-option" onclick="showSub('subsidy')">2. Subsidy Info</div>
+    <div class="chat-option" onclick="showSub('install')">3. Installation Process</div>
+    <div class="chat-option" onclick="showSub('docs')">4. Required Documents</div>
+    <div class="chat-option" onclick="showSub('contact')">5. Contact Us</div>
+  </div>
+</div>
+
+<style>
+#chatbot-toggle{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25d366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+#chatbot-box{
+position:fixed;
+bottom:95px;
+right:25px;
+width:320px;
+background:#1e293b;
+color:white;
+border-radius:18px;
+overflow:hidden;
+display:none;
+z-index:9999;
+border:1px solid rgba(255,255,255,.1);
+}
+.chat-header{
+padding:15px;
+background:#0f172a;
+font-weight:700;
+text-align:center;
+}
+.chat-body{
+padding:15px;
+max-height:400px;
+overflow-y:auto;
+}
+.chat-option{
+padding:12px;
+margin-bottom:10px;
+background:rgba(255,255,255,.08);
+border-radius:10px;
+cursor:pointer;
+}
+.chat-option:hover{
+background:rgba(255,255,255,.15);
+}
+</style>
+
+<script>
+const toggle=document.getElementById("chatbot-toggle");
+const box=document.getElementById("chatbot-box");
+const body=document.getElementById("chatBody");
+
+toggle.onclick=()=> {
+box.style.display=
+box.style.display==="block"?"none":"block";
+}
+
+function showSub(type){
+if(type==="price"){
+body.innerHTML=`
+<div class="chat-option">1kW: ₹65,000</div>
+<div class="chat-option">2kW: ₹1,20,000</div>
+<div class="chat-option">3kW: ₹1,75,000</div>
+<div class="chat-option" onclick="goHome()">⬅️ Back</div>`;
+}
+if(type==="subsidy"){
+body.innerHTML=`
+<div class="chat-option">Subsidy up to ₹78,000</div>
+<div class="chat-option">PM Surya Ghar Yojana</div>
+<div class="chat-option" onclick="goHome()">⬅️ Back</div>`;
+}
+if(type==="install"){
+body.innerHTML=`
+<div class="chat-option">Site inspection</div>
+<div class="chat-option">Panel installation</div>
+<div class="chat-option">Net meter approval</div>
+<div class="chat-option" onclick="goHome()">⬅️ Back</div>`;
+}
+if(type==="docs"){
+body.innerHTML=`
+<div class="chat-option">Aadhar Card</div>
+<div class="chat-option">Electric Bill</div>
+<div class="chat-option">Bank Passbook</div>
+<div class="chat-option" onclick="goHome()">⬅️ Back</div>`;
+}
+if(type==="contact"){
+body.innerHTML=`
+<div class="chat-option">WhatsApp: 9922016004</div>
+<div class="chat-option">Call for free quote</div>
+<div class="chat-option" onclick="goHome()">⬅️ Back</div>`;
+}
+}
+
+function goHome(){
+location.reload();
+}
+</script>
 </body>
 </html>
